@@ -1,0 +1,12 @@
+input:checked + span{
+    text-decoration: line-through;
+    background-color:  red;
+}
+
+.styleInput {
+    text-align: left;
+    list-style-type: none;
+}
+ul button {
+    color: red;
+}
