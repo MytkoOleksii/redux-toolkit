@@ -132,7 +132,6 @@ const todoSlice = createSlice({ //Аналог Reducer
               userId.completed = true
           }
         },
-
     },
     extraReducers:{ // Обработка Thunk Creator
         // Когда идет загрузка
