@@ -131,6 +131,7 @@ const todoSlice = createSlice({ //Аналог Reducer
           }  else {
               userId.completed = true
           }
+
         },
     },
     extraReducers:{ // Обработка Thunk Creator
