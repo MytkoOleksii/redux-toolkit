@@ -22,6 +22,8 @@ function Todo(props) {
         dispatch(fetchTodos())
     },[dispatch])
 
+
+
     let handlerText = (text) => {
         if (text.trim().length) {
             dispatch(addNewToto(text))
@@ -45,16 +47,16 @@ function Todo(props) {
           {/*  <button onClick={() => handlerText(text) }> add</button>*/} {/*Мое добавление*/}
             <button disabled={true} > delete</button>
             <ul>
-                {todo?.map(todo =>
+                {todo?.map(todo =>(
                     <li  className={s.styleInput}  key={todo.id}>
-                       {/* <input type={'checkbox'} checked={todo.completed} onChange={() => dispatch(toggleStatus(todo.id))}/> Статус на сервере*/}
-                       <input type={'checkbox'} checked={todo.completed} onChange={() => dispatch(toggleComplete(todo.id))}/> {/*// Мой локальный статус*/}
+                       <input type={'checkbox'} checked={todo.completed} onChange={() => dispatch(toggleStatus(todo.id))}/> {/* Статус на сервере*/}
+                       {/*<input type={'checkbox'} checked={todo.completed} onChange={() => dispatch(toggleComplete(todo.id))}/> // Мой локальный статус*/}
                         <span>{todo.title}</span>
                         <button onClick={() => dispatch(deleteTodo(todo.id))} >X</button> {/*Удаление из сервера*/}
 
                         {/* <button onClick={() => dispatch(removeLastTodo(todo))} >X</button>*/} {/*// Удаление из моего массива*/}
                     </li>
-                )}
+                ) )}
 
             </ul>
         </div>
