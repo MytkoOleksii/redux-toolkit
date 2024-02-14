@@ -7,7 +7,6 @@ let store = configureStore({
         todo: todoSlice,
         count: countSlice,
     },
-
 })
 
 

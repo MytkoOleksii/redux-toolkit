@@ -5,9 +5,9 @@ import axios from "axios";
 
 // createAsyncThunk - Аналог Thunk Creator
 export const fetchTodos = createAsyncThunk( // Получение списка пользователей
-    'todos/fetchTodos', // Тип , имя .
+    'todos/fetchTodos', //  <--(1) Тип , имя . (может быть любое имя)
     // Вариант 1
-    async function (_, {rejectWithValue}) { // rejectWithValue - содержит ошибку
+    async function (_, {rejectWithValue}) { //<--(2)То с чем ми будем работать //"rejectWithValue" - содержит ошибку.
         try {
             const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=20')
             if (!response.ok) {
